@@ -1,0 +1,12 @@
+#widget-sidebar.panel.hidden
+
+	#close
+		| Close
+		i.chevron-crimson.pointer(class="fa-solid fa-chevron-right button" onclick="hideSidebar()")
+
+	div(data-bind="with:appState.details")
+		h3(data-bind="text:named")
+		p
+			a(data-bind="attr:{'href':wiki, 'target':'_blank'}, text:wiki")
+		p
+			a(data-bind="attr:{'href':uri, 'target':'_blank'}, text:uri")

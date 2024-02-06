@@ -1,0 +1,29 @@
+div
+	#filter-container.flex
+		div(style="width:100%")
+			span.nav-item Filters
+			i#vkcA.chevron-crimson(class="fa-solid fa-chevron-down button" ref="filters-box" onClick="return expando(this) & !1")
+
+		#filters-box.hidden(data-bind="with:config")
+			table
+				tr
+					td(width="45%" style="vertical-align:top")
+						h3 Demographic
+						ul#dataset-list(data-bind="foreach:datasets")
+							li
+								input(type="radio" name="dataset-exclusive" data-bind="click:app.onDatasetSelected")
+								span(data-bind="text:$data.filter")
+					td(width="55%" style="vertical-align:top")
+						h3 Pin sets
+						ul#pinset-list(data-bind="foreach:pinsets")
+							li
+								input(type="radio" name="set-exclusive" data-bind="click:app.onPinsEvent")
+								span(data-bind="text: $data.filter")
+			div
+				button.all(href="#" onClick="return app.onClearAll()") Clear everything
+
+			code
+				| &copy; Brian Dennis
+				a(href="https://github.com/bxdinbox" target="_blank")
+					i(class="fa-brands fa-github crimson")
+				| &nbsp; (bxdinbox)

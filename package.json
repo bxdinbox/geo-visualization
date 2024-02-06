@@ -1,0 +1,20 @@
+{
+  "name": "focus",
+  "version": "2024.01.31",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "B. Dennis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mustache": "^4.2.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "3.2.4"
+  }
+}
